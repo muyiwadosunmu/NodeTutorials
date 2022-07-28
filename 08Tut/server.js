@@ -4,7 +4,7 @@ const path = require('path');
 const cors = require('cors');
 const { logger } = require('./middleware/logEvents');
 const errorHandler  = require('./middleware/errorHandler');
-const PORT = process.env.PORT || 3100;
+const PORT = process.env.PORT || 3300;
 
 app.use(logger);
 
@@ -39,7 +39,7 @@ app.use('/subdir',express.static(path.join(__dirname, '/public')));
 //routes
 app.use('/', require('./routes/root'));
 app.use('/subdir', require('./routes/subdir'));
-app.use('/employees', require('./routes/api/employees'))
+app.use('/employees', require('./routes/apis/employees'));
 
 //This is just to send a respnse
 /*app.get('/', (req,res) => {

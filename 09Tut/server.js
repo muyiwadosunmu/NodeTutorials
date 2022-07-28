@@ -2,24 +2,16 @@ const express = require("express");
 const app = express(); 
 const path = require('path');
 const cors = require('cors');
+const corsOptions = require("./config/corsOptions");
 const { logger } = require('./middleware/logEvents');
 const errorHandler  = require('./middleware/errorHandler');
 const PORT = process.env.PORT || 3300;
 
+
 app.use(logger);
 
 //2. custom middleware logger
-const whitelist = ['https://localhost:3100', 'https://127.0.0.1:5500'];
-const corsOptions = {
-    origin: (origin, callback) => {
-        if (whitelist.indexOf(origin) !== -1 || !origin) {
-            callback(null, true);
-        } else {
-            callback(new Error('Not allowed by CORS'))
-        }
-    },
-    optionssSuccessStatus: 200
-};
+
 //Cross Origin Resource Sharing
 app.use(cors(corsOptions));
 
@@ -34,11 +26,9 @@ app.use(express.json());
 
 //server static files
 app.use('/',express.static(path.join(__dirname, '/public')));
-app.use('/subdir',express.static(path.join(__dirname, '/public')));
 
 //routes
 app.use('/', require('./routes/root'));
-app.use('/subdir', require('./routes/subdir'));
 app.use('/employees', require('./routes/apis/employees'));
 
 //This is just to send a respnse
@@ -62,6 +52,5 @@ app.all('*', (req,res) => {
 });
 
 app.use(errorHandler);
-
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

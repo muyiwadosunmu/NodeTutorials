@@ -17,3 +17,6 @@
 20220725	03:05:49	319f203d-13da-47ff-afd7-6275b6958864	GET	undefined	/new-page
 20220725	03:05:50	4c63f308-e600-463b-9558-d4ee97a5a6f3	GET	undefined	/css/style.css
 20220725	03:05:50	00283396-bfc1-4e63-a51e-d4d00211b6d3	GET	undefined	/img/img1.jpg
+20220726	02:39:41	8acf5057-2c5f-4195-9b91-33009684b9df	GET	undefined	/
+20220726	02:39:43	ee80f419-af4a-4d74-95f9-e35760538c5d	GET	undefined	/css/style.css
+20220726	02:39:51	f269e1be-8d11-4149-a8b9-05d5009fabd4	GET	undefined	/favicon.ico

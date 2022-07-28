@@ -1,6 +1,6 @@
-const express = require("exprress");
+const express = require("express");
 const router = express.Router();
-const path = require();
+
 const data = {};
 data.employees = require('../../data/employees.json');
 
@@ -11,7 +11,7 @@ router.route('/')
     .post((req,res) => {
         res.json({
             "firstname": req.body.firstname,
-            "lastname":req.body,lastname
+            "lastname":req.body.lastname
         });
     })
     .put((req,res) => {
@@ -21,7 +21,12 @@ router.route('/')
         });
     })
     .delete((req,res) => {
-        res.json({"id":req.body.id})
+        res.json({"id":req.body.id});
+    });
+
+router.route('/:id')
+    .get((req,res) => {
+        res.json({ "id" :req.params.id });
     });
 
 module.exports = router;
