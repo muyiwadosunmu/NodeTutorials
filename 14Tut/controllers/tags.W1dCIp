@@ -1,0 +1,8 @@
+users	authController.js	/^const usersDB = {$/;"	p	class:const
+employees	employeesController.js	/^const data = {$/;"	p	class:const
+id	employeesController.js	/^    const newEmployee = {$/;"	p	class:const
+users	logoutController.js	/^const usersDB = {$/;"	p	class:const
+users	refreshTokenController.js	/^const usersDB = {$/;"	p	class:const
+users	registerController.js	/^const usersDB = {$/;"	p	class:const
+username	registerController.js	/^        const newUser = {$/;"	p	class:const
+roles	registerController.js	/^            "username": user,$/;"	p	class:const
