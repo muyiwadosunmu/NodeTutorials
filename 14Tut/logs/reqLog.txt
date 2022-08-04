@@ -21,3 +21,6 @@
 20220803	15:48:18	14032c18-1dbc-4c28-a442-c5eefc6dfce4	GET	undefined	/auth
 20220803	15:48:23	78cd44ce-be34-43a2-b38d-2ba1f4d05c19	POST	undefined	/auth
 20220803	15:48:49	83ae45b1-3fdd-432e-9b32-96e6ec4bdaf1	GET	undefined	/employees
+20220804	06:13:25	2b2f5ca7-9ed2-49f7-9338-ca8a161baf8f	POST	undefined	/register
+20220804	06:15:39	58d0e2bc-1c89-4143-83b9-2d2bcc6bcf80	POST	undefined	/register
+20220804	06:17:05	ee449255-fb8c-43d9-b08a-0f3396247df0	POST	undefined	/register
