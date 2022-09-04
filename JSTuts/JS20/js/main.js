@@ -16,3 +16,10 @@ const views = document.getElementsByClassName("view");
 console.log(views)
 
 const sameViews = document.querySelectorAll(".view")
+console.log(sameViews);
+
+const divs = view1.querySelectorAll("divs")
+console.log(divs);
+
+const sameDivs = view1.getElementsByTagName("div");
+console.log(sameDivs);
