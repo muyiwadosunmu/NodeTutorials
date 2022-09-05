@@ -15,14 +15,16 @@ const initApp = () => {
     const h2 = div.querySelector("h2");
 
     view.addEventListener("click", (event) => {
+        event.stopPropagation();
         view.style.backgroundColor = "purple";
-    })
+    }, false)
 
     div.addEventListener("click", (event) => {
         div.style.backgroundColor = "blue";
-    })
+    }, false)
 
     h2.addEventListener("click", (event) => {
+        event.stopPropagation();
         event.target.textContent = "Clicked";
-    })
-}
+    }, false)
+};
