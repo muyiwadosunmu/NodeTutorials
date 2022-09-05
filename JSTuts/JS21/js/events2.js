@@ -15,16 +15,21 @@ const initApp = () => {
     const h2 = div.querySelector("h2");
 
     view.addEventListener("click", (event) => {
-        event.stopPropagation();
-        view.style.backgroundColor = "purple";
+        
+        view.classList.toggle("purple");
+        view.classList.toggle("darkblue");
     }, false)
 
     div.addEventListener("click", (event) => {
-        div.style.backgroundColor = "blue";
+        div.classList.toggle("purple");
+        div.classList.toggle("darkblue");
     }, false)
 
     h2.addEventListener("click", (event) => {
-        event.stopPropagation();
-        event.target.textContent = "Clicked";
+        const myText = event.target.textContent;
+        myText === "My 2nd View"
+          ? (event.target.textContent = "Clicked")
+          : (event.target.textContent = "My 2nd View")
+        
     }, false)
 };
