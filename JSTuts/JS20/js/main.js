@@ -63,4 +63,8 @@ const createDivs = (parent, iter) => {
     newDiv.style.alignItems = "center";
     parent.append(newDiv);
 }
-createDivs(view2, 10);
+// createDivs(view2, 10);
+
+for (let i =1;i<= 12, i++) {
+    createDivs(view2,i)
+}
