@@ -23,3 +23,6 @@ console.log(divs);
 
 const sameDivs = view1.getElementsByTagName("div");
 console.log(sameDivs);
+
+const evenDivs = view1.querySelectorAll("div:nth of type(2n)");
+console.log(evenDivs)
