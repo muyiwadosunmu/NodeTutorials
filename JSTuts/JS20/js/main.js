@@ -26,3 +26,10 @@ console.log(sameDivs);
 
 const evenDivs = view1.querySelectorAll("div:nth of type(2n)");
 console.log(evenDivs)
+
+// To alter some parameters on the web page of selected evenDivs
+for (let i = 0; i < evenDivs.length; i++) {
+    evenDivs[i].style.backgroundColor = "dark blue"; 
+    /* evenDivs[i].style.backgroundColor = "100px";
+    evenDivs[i].style.height = "200px"; */
+}
